@@ -167,15 +167,19 @@ public class SceneBuilder : MonoBehaviour
         go .transform.position = Camera.main.transform.position +
             10.5f * Camera.main.transform.forward * cubePrefab.transform.localScale.z / 2.0f;
         go.transform.rotation = Quaternion.identity;
+        go.transform.localScale = cubePrefab.transform.localScale;
         go.SetActive(true);
         GameObjectsToTrack.Add(go);
     }
 
     public void ClearAllObjects()
     {
+        
         foreach (GameObject go in GameObjectsToTrack)
         {
             ReturnCubeToPool(go);
+            go.transform.rotation = Quaternion.identity;
+            go.transform.localScale = cubePrefab.transform.localScale;
         }
         GameObjectsToTrack.Clear();
         

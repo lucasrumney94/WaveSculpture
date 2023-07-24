@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 7990194391595754540, guid: 4ce3fef9e6c1ec84cae47cc86eb75109,
     type: 3}
-  poolCount: 5
+  poolCount: 50
 --- !u!1 &816525439
 GameObject:
   m_ObjectHideFlags: 0
